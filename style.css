@@ -178,7 +178,7 @@ button[onclick="reiniciarJogo()"]:hover {
     font-size: 1.5em;
   }
   .tecla {
-    padding: 7px;
+    padding: 6.5px;
     font-size: 1em;
   }
   #btn-verificar,
