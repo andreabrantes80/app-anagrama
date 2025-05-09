@@ -144,8 +144,11 @@ function atualizarPontuacao() {
 
 function carregarPontuacao() {
     const pontuacaoSalva = localStorage.getItem('anagramaPontos');
-    if (pontuacaoSalva) {
+    if (pontuacaoSalva !== null && !isNaN(parseInt(pontuacaoSalva))) {
         pontuacao = parseInt(pontuacaoSalva);
+    } else {
+        pontuacao = 0;
+        localStorage.setItem("anagramaPontos", pontuacao)
     }
     atualizarPontuacao();
 }
