@@ -31,6 +31,7 @@ h1 {
 }
 #pontuacao {
   font-size: 1.5em;
+  font-weight: 500;
   margin-top: 10px;
   color: #555;
 }
@@ -44,7 +45,7 @@ h1 {
 #resultado {
   font-size: 2.5em;
   margin-top: 20px;
-  color: #333;
+  color: #dd0404;
   min-height: 40px;
 }
 
@@ -69,6 +70,12 @@ h1 {
 .tecla:hover {
   background-color: #078b23;
   transform: scale(1.05);
+}
+#botoes-controle {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espaçamento entre os botões */
+  margin-top: 20px;
 }
 
 #btn-verificar,
@@ -139,6 +146,20 @@ h1 {
   cursor: pointer;
 }
 
+button[onclick="reiniciarJogo()"] {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+button[onclick="reiniciarJogo()"]:hover {
+  background-color: #218838;
+}
+
 @media (max-width: 600px) {
   body {
     font-size: 14px;
@@ -157,15 +178,23 @@ h1 {
     font-size: 1.5em;
   }
   .tecla {
-    padding: 10px;
+    padding: 9px;
     font-size: 1em;
   }
   #btn-verificar,
   #btn-dica {
     padding: 10px 20px;
     font-size: 1em;
+    text-align: center;
+    
   }
   #resultado {
     font-size: 1.5em;
+    color: #dd0404;
+  }
+  #botoes-controle {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
   }
 }
